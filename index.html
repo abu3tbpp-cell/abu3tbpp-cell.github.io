@@ -12,9 +12,9 @@
   <link rel="alternate" hreflang="ar" href="https://abu3tbpp-cell.github.io/">
   <link rel="alternate" hreflang="en" href="https://abu3tbpp-cell.github.io/en/">
   <link rel="alternate" hreflang="x-default" href="https://abu3tbpp-cell.github.io/">
-  <meta name="theme-color" <<meta name="theme-color" content="#38BDF8">
+  <meta name="theme-color" content="#38BDF8">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="محمد العتيبي">
   <meta name="format-detection" content="telephone=no">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -461,10 +461,10 @@
 
   <style>
     :root{
-      --ink:#0a0a0a; --ink-2:#121110; --line:rgba(201,165,76,.22);
-      --gold:#c9a54c; --gold-hi:#f1d98b; --gold-lo:#8a6a24;
-      --text:#e9e4d8; --muted:#a59d8a;
-      --gold-grad:linear-gradient(100deg,#8a6a24 0%,#d9b85f 22%,#f6e3a1 40%,#c9a54c 58%,#8a6a24 80%,#d9b85f 100%);
+      --ink:#ffffff; --ink-2:#f0f9ff; --line:rgba(14,165,233,.20);
+      --gold:#0369a1; --gold-hi:#075985; --gold-lo:#0284c7;
+      --text:#172033; --muted:#52677b;
+      --gold-grad:linear-gradient(110deg,#075985,#0284c7,#0369a1);
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:84px}
@@ -476,8 +476,8 @@
     body::before{
       content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
       background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,165,76,.10), transparent 70%),
-        radial-gradient(ellipse 120% 80% at 50% 120%, rgba(0,0,0,.9), transparent 60%);
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,165,233,.10), transparent 70%),
+        radial-gradient(ellipse 120% 80% at 50% 120%, rgba(186,230,253,.25), transparent 60%);
     }
     a{color:inherit;text-decoration:none}
     [lang="en"]{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif}
@@ -488,7 +488,7 @@
     header.top{
       position:fixed; top:0; inset-inline:0; z-index:10;
       padding-top:env(safe-area-inset-top);
-      background:linear-gradient(to bottom, rgba(10,10,10,.94), rgba(10,10,10,0));
+      background:linear-gradient(to bottom, rgba(255,255,255,.98), rgba(255,255,255,.92));
     }
     header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
     .mono{font-family:"Amiri",serif;font-size:1.5rem;color:var(--gold);letter-spacing:.02em}
@@ -510,12 +510,12 @@
     @keyframes spin{to{transform:rotate(360deg)}}
     .eyebrow{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-size:.8rem;margin-bottom:22px;direction:ltr}
     h1.name{
-      font-family:"Aref Ruqaa","Amiri",serif; font-weight:700;
+      font-family:"Amiri",serif; font-weight:700;
       font-size:clamp(2.4rem,9vw,6.6rem); line-height:1.35;
       background:var(--gold-grad); background-size:200% auto;
       -webkit-background-clip:text; background-clip:text; color:transparent;
       animation:sheen 9s ease-in-out infinite alternate;
-      filter:drop-shadow(0 6px 30px rgba(201,165,76,.18));
+      filter:drop-shadow(0 6px 30px rgba(14,165,233,.18));
     }
     @keyframes sheen{to{background-position:100% center}}
     .name-en{display:block;font-family:"Cormorant Garamond",serif!important;font-weight:500;direction:ltr;
@@ -530,7 +530,7 @@
     .cta{display:inline-flex;gap:14px;margin-top:42px;flex-wrap:wrap;justify-content:center}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 30px;border:1px solid var(--gold);color:var(--gold-hi);font-size:.95rem;letter-spacing:.03em;transition:all .35s;min-height:48px}
     .btn.solid{background:var(--gold-grad);background-size:200% auto;color:#141005;font-weight:500;border-color:transparent}
-    .btn:hover{background-position:100% center;box-shadow:0 0 0 1px var(--gold),0 10px 40px -10px rgba(201,165,76,.5)}
+    .btn:hover{background-position:100% center;box-shadow:0 0 0 1px var(--gold),0 10px 40px -10px rgba(14,165,233,.5)}
     .scroll{position:absolute;bottom:clamp(28px,5vw,64px);left:50%;transform:translateX(-50%);width:1px;height:48px;background:linear-gradient(var(--gold),transparent)}
 
     /* quick index */
@@ -602,8 +602,8 @@
     .socials{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
     .card{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;padding:40px 18px 34px;
       background:linear-gradient(160deg,var(--ink-2),var(--ink));border:1px solid var(--line);transition:transform .4s,border-color .4s,box-shadow .4s;overflow:hidden}
-    .card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,165,76,.16),transparent 65%);opacity:0;transition:opacity .4s}
-    .card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 24px 60px -30px rgba(201,165,76,.55)}
+    .card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(14,165,233,.16),transparent 65%);opacity:0;transition:opacity .4s}
+    .card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 24px 60px -30px rgba(14,165,233,.55)}
     .card:hover::after{opacity:1}
     .card svg{width:42px;height:42px;fill:var(--gold);position:relative;z-index:1;transition:fill .4s}
     .card:hover svg{fill:var(--gold-hi)}
@@ -652,6 +652,24 @@
       *{animation:none!important;transition:none!important}
       .js .reveal{opacity:1;transform:none}
     }
+   
+    body{font-weight:400}
+    header.top{border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    h1.name{font-size:clamp(2.35rem,6.8vw,5rem);line-height:1.55;animation:none;filter:none;color:#075985;background:none}
+    .name-en{letter-spacing:.055em;color:#334155}
+    .hero{min-height:88svh;padding:112px 0 76px;background:radial-gradient(ellipse at top,#e0f2fe 0%,transparent 65%)}
+    .hero .wrap{max-width:950px}
+    .star{animation:none;color:#0ea5e9}
+    .eyebrow,.sec-head small{font-style:normal;color:#0369a1;letter-spacing:.16em}
+    .btn{border-radius:8px;font-weight:600}
+    .btn.solid{background:linear-gradient(110deg,#0369a1,#0284c7);color:white}
+    .card,.degree,.langs li,.chips li{border-radius:12px}
+    .card::after{pointer-events:none}
+    .sec-head h2{color:#075985}
+    .title{font-weight:700}
+    .js .reveal{opacity:1;transform:none}
+    a:focus-visible{outline:3px solid #0284c7;outline-offset:4px}
+    @media(max-width:560px){.hero{min-height:85svh}.name-en{font-size:1.05rem}.title{font-size:1.12rem}.divider{margin:22px auto}.cta{margin-top:28px}}
   </style><style>
 
 :root {
